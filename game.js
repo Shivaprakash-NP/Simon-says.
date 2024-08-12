@@ -19,7 +19,7 @@ $(document).keypress(function() {
 function nextSequence() {
   level += 1;
   $("#level-title").text("Level " + level);
-
+  $("#st").text("Love it......       Play it");
   // Generate a random color and add it to the game pattern
   var randomNumber = Math.floor(Math.random() * 4);
   var randomChosenColour = buttonColours[randomNumber];
@@ -85,7 +85,7 @@ function checkAnswer(currentLevel) {
     gamePattern = [];
     started = false;
     level = 0;
-     $("#st").text("Re-Start")
+    $("#st").text("Re-Start")
   }
 }
 $(".mobile").click(function() {
@@ -93,6 +93,4 @@ $(".mobile").click(function() {
     nextSequence();
     started = true;
   }
-  $("#st").text("Love it......       Play it");
-
 })
